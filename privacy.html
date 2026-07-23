@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>개인정보 처리방침 - 담아</title>
+<style>
+  @font-face{font-family:"Pretendard";src:url("./fonts/Pretendard-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Pretendard";src:url("./fonts/Pretendard-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Pretendard";src:url("./fonts/Pretendard-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Pretendard";src:url("./fonts/Pretendard-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+
+  :root{
+    --primary-50:#FFF8ED; --primary-100:#FFEBD4; --primary-500:#FF8A00; --primary-600:#E67A00;
+    --neutral-50:#F9FAFB; --neutral-100:#F2F4F6; --neutral-200:#E5E8EB; --neutral-300:#D1D6DB;
+    --neutral-500:#8B95A1; --neutral-600:#4E5968; --neutral-700:#333D4B; --neutral-900:#191F28;
+    --surface-background:#F9FAFB; --surface-card:#FFFFFF;
+    --text-body:var(--neutral-600); --text-muted:var(--neutral-500);
+    --border-subtle:var(--neutral-100); --border-strong:var(--neutral-200);
+    --font-family-base:"Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    --radius-sm:8px; --radius-md:14px; --radius-pill:9999px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:var(--font-family-base);color:var(--text-body);background:var(--surface-background);-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  .doc-shell{max-width:760px;margin:0 auto;padding:56px 24px 120px;}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font:600 14px/1 var(--font-family-base);color:var(--neutral-600);text-decoration:none;margin-bottom:32px;}
+  .back-link:hover{color:var(--primary-600);}
+  .doc-title{font:800 32px/1.3 var(--font-family-base);color:var(--neutral-900);letter-spacing:-0.02em;margin:0 0 10px;}
+  .doc-meta{font:500 14px/1.6 var(--font-family-base);color:var(--text-muted);margin:0 0 28px;}
+  .lang-tabs{display:inline-flex;background:var(--neutral-100);padding:4px;border-radius:var(--radius-pill);margin-bottom:40px;gap:2px;}
+  .lang-tab{border:none;background:transparent;padding:8px 22px;border-radius:var(--radius-pill);font:600 14px/1 var(--font-family-base);color:var(--text-muted);cursor:pointer;}
+  .lang-tab.active{background:var(--neutral-900);color:#fff;}
+  .doc-body h2{font:700 20px/1.4 var(--font-family-base);color:var(--neutral-900);margin:40px 0 14px;padding-top:24px;border-top:1px solid var(--border-subtle);}
+  .doc-body h2:first-child{margin-top:0;padding-top:0;border-top:none;}
+  .doc-body h3{font:600 16px/1.5 var(--font-family-base);color:var(--neutral-900);margin:22px 0 8px;}
+  .doc-body p{font:500 15px/1.8 var(--font-family-base);color:var(--text-body);margin:0 0 14px;}
+  .doc-body ul,.doc-body ol{margin:0 0 14px;padding-left:20px;}
+  .doc-body li{font:500 15px/1.8 var(--font-family-base);color:var(--text-body);margin-bottom:6px;}
+  .doc-body .note{font:500 13px/1.7 var(--font-family-base);color:var(--text-muted);background:var(--neutral-50);border-left:3px solid var(--border-strong);padding:10px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:0 0 14px;}
+  .doc-body .table-wrap{overflow-x:auto;margin:0 0 20px;}
+  .doc-body table{width:100%;border-collapse:collapse;font:500 13px/1.6 var(--font-family-base);min-width:480px;}
+  .doc-body th,.doc-body td{border:1px solid var(--border-subtle);padding:10px 12px;text-align:left;vertical-align:top;}
+  .doc-body th{background:var(--neutral-50);color:var(--neutral-700);font-weight:700;white-space:nowrap;}
+  .doc-body strong{color:var(--neutral-900);}
+  .doc-body .tbd{background:var(--primary-100);color:var(--primary-600);padding:1px 6px;border-radius:4px;font-weight:600;}
+  .doc-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border-subtle);font:500 13px/1.8 var(--font-family-base);color:var(--text-muted);}
+  @media (max-width:600px){.doc-shell{padding:40px 20px 100px;}.doc-title{font-size:26px;}}
+</style>
+</head>
+<body>
+<div class="doc-shell">
+  <a href="index.html" class="back-link">← 홈으로 돌아가기</a>
+  <h1 class="doc-title">개인정보 처리방침</h1>
+  <p class="doc-meta">최종 수정일: 2026년 7월 20일</p>
+
+  <div class="lang-tabs">
+    <button class="lang-tab active" data-lang="ko">한국어</button>
+    <button class="lang-tab" data-lang="en">English</button>
+  </div>
+
+  <article class="doc-body" data-lang="ko">
+    <p>담아(DAMA)("회사", "당사")는 이용자의 개인정보를 소중하게 생각하며, 대한민국 「개인정보 보호법(PIPA)」 및 관련 법령을 준수합니다. 본 개인정보 처리방침(이하 "본 방침")은 당사가 제공하는 공동구매 마켓 서비스 "담아(DAMA)" 애플리케이션 및 관련 웹사이트(이하 "서비스") 이용과 관련하여 개인정보가 어떻게 수집·이용·보관·공유되는지 설명합니다.</p>
+
+    <h2>제1조 수집하는 개인정보 항목</h2>
+    <h3>1) 이용자(구매자) 회원가입 시</h3>
+    <ul>
+      <li>(필수) 이름, 이메일, 휴대폰번호, 닉네임, 생년월일</li>
+      <li>(필수) 소셜 로그인(카카오) 이용 시: 카카오로부터 제공받는 이메일, 프로필 닉네임 등 카카오 계정 식별 정보</li>
+    </ul>
+    <h3>2) 위치정보 (별도 동의)</h3>
+    <ul>
+      <li>(선택) 현재 위치 정보(GPS) — 인근 공동구매/가게 정보 제공 목적이며, 미동의 시에도 서비스 기본 이용 가능</li>
+    </ul>
+    <p class="note">⚠️ 위치정보를 수집하는 경우 「위치정보의 보호 및 이용 등에 관한 법률」에 따라 방송통신위원회에 위치기반서비스사업 신고가 별도로 필요할 수 있습니다.</p>
+    <h3>3) 판매자(사장님) 등록 시</h3>
+    <ul>
+      <li>(필수) 사업자등록번호, 상호명, 가게 이미지, 상품(공구) 정보 및 사진, 담당자 연락처</li>
+      <li><mark class="tbd">[ ]</mark> (필수 예정) 정산을 위한 은행계좌정보(은행명, 예금주, 계좌번호)는 결제 시스템(PG) 도입 시 추가 수집 예정이며, 도입 시 본 방침에 반영하여 사전 고지합니다.</li>
+    </ul>
+    <h3>4) 리뷰 작성 시</h3>
+    <ul><li>(필수) 이용자가 직접 작성한 리뷰 텍스트 및 첨부 이미지</li></ul>
+    <h3>5) 공구 주문 및 수령 시</h3>
+    <ul><li>(필수) 수령을 위한 이름, 연락처 (판매자에게 전달되는 정보이며, 자세한 내용은 제6조를 참고하세요)</li></ul>
+    <p>현재 상품 결제는 앱 외부에서 구매자와 판매자 간 직접 이루어지며(카드, 현금, 제로페이, 네이버페이, 카카오페이 등), 당사는 결제 과정에서 카드정보, 계좌정보 등 결제 관련 개인정보를 수집·처리하지 않습니다. 추후 앱 내 결제 시스템(PG)이 도입되면 본 방침에 반영하여 사전 고지합니다.</p>
+    <h3>6) 인앱 채팅 기능 (도입 예정)</h3>
+    <p><mark class="tbd">[ ]</mark> 담아는 구매자-판매자 간 원활한 거래를 위한 인앱 채팅 기능을 도입할 예정입니다. 채팅 기능이 도입되면 채팅 내용이 개인정보 수집 항목에 추가되며, 도입 전 본 방침을 개정하여 사전 고지하고 필요한 경우 별도 동의를 받습니다.</p>
+    <h3>7) 서비스 이용 과정에서 자동으로 수집되는 정보</h3>
+    <ul>
+      <li>접속 IP 주소, 기기 정보(기종, OS 버전 등), 앱 버전, 접속 일시, 서비스 이용 기록(오류 로그 포함)</li>
+      <li>앱 푸시 알림 발송을 위한 푸시 토큰</li>
+    </ul>
+    <p>이 외에도 서비스 이용 및 관리 과정에서 단말기 관련 정보, 로그정보, 브라우저 정보 등이 추가로 수집될 수 있으나, 이것만으로 특정 개인을 식별할 수는 없습니다.</p>
+
+    <h2>제2조 개인정보 수집방법</h2>
+    <p>회사는 다음과 같은 방법으로 개인정보를 수집합니다.</p>
+    <ol>
+      <li>회원가입 및 서비스 이용 과정에서 이용자가 개인정보 수집에 동의하고 직접 정보를 입력하는 경우</li>
+      <li>고객센터를 통한 상담 과정(이메일, 앱 내 문의 등)에서 이용자가 자발적으로 정보를 제공하는 경우</li>
+      <li>카카오 등 제휴 서비스로부터 이용자 동의 하에 정보를 제공받는 경우</li>
+      <li>서비스 이용 과정에서 로그 분석, 쿠키 등을 통해 자동으로 수집되는 경우</li>
+    </ol>
+
+    <h2>제3조 접근권한에 대한 안내</h2>
+    <p>회사는 모바일 앱 서비스 제공을 위하여 아래와 같이 이용자의 이동통신단말기 내 정보 및 기능에 접근할 수 있습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>권한 항목</th><th>이용 목적</th></tr>
+      <tr><td>필수</td><td>기기 및 앱 정보</td><td>기기식별 및 앱 버전(상태) 확인</td></tr>
+      <tr><td>선택</td><td>카메라 / 사진(iOS)</td><td>가게 이미지 및 리뷰 작성 시 사진 첨부</td></tr>
+      <tr><td>선택</td><td>외부 저장소(Android)</td><td>가게 이미지 및 리뷰 작성 시 사진 첨부</td></tr>
+      <tr><td>선택</td><td>위치정보</td><td>인근 공구/가게 추천 (제1조 2호 참고)</td></tr>
+      <tr><td>선택</td><td>알림(Push)</td><td>공구 수령 안내, 가게 정보 알림 발송</td></tr>
+    </table></div>
+    <p>필수 접근권한은 앱 설치 또는 최초 실행 시 안내하며, 선택 접근권한은 해당 기능을 최초 이용할 때 별도로 동의를 받습니다. 이용자가 선택 접근권한에 동의하지 않아도 서비스의 기본 이용에는 지장이 없습니다.</p>
+
+    <h2>제4조 개인정보의 처리 목적</h2>
+    <p>당사는 수집한 개인정보를 아래의 목적으로 이용합니다.</p>
+    <ul>
+      <li>회원 가입, 본인 확인 및 계정 관리</li>
+      <li>공동구매(공구) 상품 정보 제공 및 거래(구매/판매) 중개</li>
+      <li>리뷰 등록 및 다른 이용자에게 리뷰(텍스트·이미지) 노출</li>
+      <li>인근 지역 기반 공구/가게 정보 추천 (위치정보 동의 시)</li>
+      <li>공구 수령 처리를 위한 판매자-구매자 간 정보 전달 (제6조 참고)</li>
+      <li><mark class="tbd">[ ]</mark> (도입 예정) 인앱 채팅을 통한 구매자-판매자 간 원활한 거래 소통 지원</li>
+      <li>공구 수령 안내, 가게 정보 알림 등 서비스 이용에 필요한 알림(앱푸시, 카카오 알림톡) 발송</li>
+      <li>부정 이용 방지, 서비스 안정성 확보 및 민원 처리</li>
+      <li>법령상 의무 이행</li>
+    </ul>
+    <p><strong>본 항목의 알림(공구 수령 안내, 가게 정보 알림)은 서비스 제공을 위한 필수 안내로 운영되며, 당사는 별도의 광고성 마케팅(할인 광고, 프로모션 등) 목적으로 이용자 정보를 활용하지 않습니다.</strong></p>
+    <p class="note">※ 다만 향후 프로모션성 알림톡/푸시를 도입할 경우, 「정보통신망법」 제50조에 따라 사전 별도 동의를 받고 수신거부(옵트아웃) 방법을 안내할 예정입니다.</p>
+
+    <h2>제5조 개인정보의 보유 및 이용 기간</h2>
+    <ol>
+      <li>회사는 법령에 따른 보유기간 또는 이용자로부터 동의받은 보유기간 내에서 개인정보를 처리·보유합니다.</li>
+      <li>회사의 개인정보 처리 및 보유기간은 다음과 같습니다.</li>
+    </ol>
+    <div class="table-wrap"><table>
+      <tr><th>정보</th><th>보유 기간</th></tr>
+      <tr><td>회원 정보(이름, 이메일, 휴대폰번호, 닉네임, 생년월일)</td><td>회원 탈퇴 시까지, 탈퇴 즉시 또는 기술적으로 가능한 범위 내 지체 없이 삭제</td></tr>
+      <tr><td>판매자 사업자 정보, 가게/상품 정보</td><td>입점 계약 종료 시까지</td></tr>
+      <tr><td>리뷰(텍스트·이미지)</td><td>이용자가 삭제하거나 회원 탈퇴 시까지</td></tr>
+      <tr><td>위치정보</td><td>이용 목적 달성 즉시 파기 (별도 보관하지 않음)</td></tr>
+      <tr><td>접속 로그, 서비스 이용 기록</td><td>보안 및 서비스 개선 목적으로 최대 1년간 보관 후 파기</td></tr>
+    </table></div>
+    <ol start="3">
+      <li>「전자상거래 등에서의 소비자보호에 관한 법률」 등 관계 법령에 따라 아래 정보는 명시된 기간 동안 별도 보관 후 파기합니다.</li>
+    </ol>
+    <div class="table-wrap"><table>
+      <tr><th>보관 정보</th><th>보관 기간</th><th>근거 법령</th></tr>
+      <tr><td>표시·광고에 관한 기록</td><td>6개월</td><td>전자상거래법 시행령</td></tr>
+      <tr><td>계약 또는 청약철회, 대금결제, 재화 등의 공급에 관한 기록</td><td>5년</td><td>전자상거래법 시행령</td></tr>
+      <tr><td>소비자의 불만 또는 분쟁처리에 관한 기록</td><td>3년 (민사·형사·행정 절차 진행 중인 경우 해당 절차 종료 시까지)</td><td>전자상거래법 시행령</td></tr>
+      <tr><td>세금계산서 등 국세 증빙자료</td><td><mark class="tbd">[ ]</mark> 세무사 확인 필요 (통상 5~10년)</td><td>국세기본법 등</td></tr>
+      <tr><td>로그인 기록 등 통신사실확인자료</td><td>3개월~1년 (자료 종류별 상이)</td><td>통신비밀보호법 제41조</td></tr>
+    </table></div>
+    <p class="note">※ 위 표의 세무 관련 보관기간은 자료의 종류(세금계산서, 원천징수영수증 등)에 따라 달라질 수 있으므로, 결제 시스템 도입 및 세무 신고 방식이 확정되면 세무사와 함께 정확한 기간을 확정해 반영해야 합니다.</p>
+    <p>보유 기간이 지나거나 처리 목적이 달성된 개인정보는 지체 없이 파기하며, 다른 법령에 따라 보관이 필요한 경우 별도의 데이터베이스로 옮기거나 보관 장소를 달리하여 보존합니다.</p>
+
+    <h2>제6조 개인정보의 제3자 제공</h2>
+    <p>당사는 원칙적으로 이용자의 개인정보를 외부에 제공하지 않습니다. 다만, 다음의 경우 예외적으로 제공될 수 있습니다.</p>
+    <ul>
+      <li>이용자가 사전에 명시적으로 동의한 경우</li>
+      <li>법령에 따라 요구되거나 수사기관의 적법한 절차에 따른 요청이 있는 경우</li>
+    </ul>
+    <p><strong>[제3자 제공 안내]</strong></p>
+    <div class="table-wrap"><table>
+      <tr><th>제공받는 자</th><th>제공 항목</th><th>제공 목적</th></tr>
+      <tr><td>판매자(사장님)</td><td>구매자 이름, 연락처, 수령 정보</td><td>공구 주문 확인 및 상품 수령 처리</td></tr>
+      <tr><td>카카오</td><td>로그인 식별 정보</td><td>소셜 로그인 연동</td></tr>
+      <tr><td><mark class="tbd">[ ]</mark> 향후 결제대행(PG)사</td><td>결제에 필요한 최소한의 정보</td><td>결제 처리 (PG사 확정 후 상세 반영 예정)</td></tr>
+    </table></div>
+    <p>공유되는 정보는 위 목적 달성에 필요한 최소한의 정보로 한정됩니다.</p>
+
+    <h2>제7조 개인정보 처리의 위탁</h2>
+    <p>서비스 제공을 위해 아래와 같이 업무 일부를 외부 업체에 위탁하고 있으며, 위탁계약 체결 시 위탁업무 목적 외 처리 금지, 기술적·관리적 보호조치, 재위탁 제한 등을 문서로 규정하고 수탁자를 관리·감독하고 있습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>수탁업체</th><th>위탁 업무</th><th>비고</th></tr>
+      <tr><td>Amazon Web Services (AWS)</td><td>서버 인프라 및 데이터 저장</td><td><mark class="tbd">[ ]</mark> 서버 리전 확정 필요 (국내/해외)</td></tr>
+      <tr><td>Firebase Cloud Messaging (FCM) 등</td><td>앱 푸시 알림 발송</td><td>-</td></tr>
+      <tr><td>카카오 (카카오톡 채널/알림톡)</td><td>카카오 알림톡 발송</td><td>-</td></tr>
+      <tr><td><mark class="tbd">[ ]</mark> 향후 결제대행(PG)사</td><td>결제·환불 처리</td><td>확정 시 추가</td></tr>
+      <tr><td><mark class="tbd">[ ]</mark> 향후 휴대폰 본인인증 업체</td><td>회원가입 시 본인확인 (도입 시)</td><td>확정 시 추가</td></tr>
+    </table></div>
+    <p>위탁 업무의 내용이나 수탁자가 변경될 경우, 지체 없이 본 방침을 통해 공개합니다.</p>
+
+    <h2>제8조 국외 이전에 관한 사항</h2>
+    <p>당사는 서버 인프라로 Amazon Web Services(AWS)를 이용하고 있습니다.</p>
+    <ul>
+      <li>이전받는 자: Amazon Web Services, Inc.</li>
+      <li>이전 항목: 회원 정보, 판매자 정보, 리뷰 등 서비스 이용 전반의 데이터</li>
+      <li>이전 국가 및 저장 위치: <mark class="tbd">확정 필요</mark> — 국내(서울) 리전만 사용하는 경우 본 조항은 "국외 이전 없음"으로 수정 가능하며, 해외 리전을 병행 사용할 경우 이전 국가·시기·방법을 구체적으로 명시해야 합니다.</li>
+      <li>이전 목적: 서비스 제공을 위한 서버 운영 및 데이터 저장</li>
+      <li>보호조치: 전송구간 암호화(TLS), 저장 시 암호화, 접근 통제</li>
+    </ul>
+    <p class="note">※ 이 조항은 실제 AWS 리전이 확정되는 대로 반드시 구체화해야 하며, 해외 리전을 사용할 경우 개인정보 보호법 제28조의8에 따라 이용자가 국외 이전 사실을 명확히 인지할 수 있도록 고지해야 합니다.</p>
+
+    <h2>제9조 이용자의 권리·의무 및 행사방법</h2>
+    <ol>
+      <li>이용자(회원)는 언제든지 아래의 권리를 행사할 수 있습니다.
+        <ul>
+          <li>본인 개인정보 열람 요청</li>
+          <li>본인 개인정보 정정·삭제 요청</li>
+          <li>개인정보 처리 정지 요청</li>
+          <li>동의 철회 (회원 탈퇴 포함)</li>
+        </ul>
+      </li>
+      <li>위 권리 행사는 이메일 <strong>dama_admin@gmail.com</strong> 으로 요청할 수 있으며, 당사는 본인 확인 후 지체 없이 필요한 조치를 취합니다.</li>
+      <li>이용자가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우, 정정 또는 삭제가 완료될 때까지 해당 개인정보를 이용하거나 제3자에게 제공하지 않습니다.</li>
+      <li>이용자는 관계 법령을 위반하여 본인 또는 타인의 개인정보를 침해해서는 안 됩니다.</li>
+    </ol>
+
+    <h2>제10조 판매자 정보 및 리뷰의 공개 범위 (담아 서비스 특성 안내)</h2>
+    <p>담아는 공동구매 마켓 서비스로서, 아래 정보는 <strong>서비스 특성상 로그인한 모든 이용자에게 공개</strong>됩니다.</p>
+    <ul>
+      <li>판매자(사장님)가 등록한 가게 정보, 상호명, 상품(공구) 사진 및 설명</li>
+      <li>이용자가 작성한 리뷰 텍스트 및 첨부 이미지</li>
+    </ul>
+    <p>이용자는 리뷰 작성 시 본인 또는 제3자의 초상, 개인정보가 포함되지 않도록 유의해야 하며, 당사는 공개된 리뷰·가게 정보가 다른 이용자에게 열람됨을 사전에 안내합니다. 판매자는 사업자등록번호 등 사업자 식별 정보가 서비스 운영(정산, 분쟁 대응) 목적으로 관리자에게 확인될 수 있음에 동의한 것으로 간주됩니다.</p>
+
+    <h2>제11조 쿠키(Cookie) 및 유사 기술</h2>
+    <p>당사는 앱/웹사이트 기본 기능 제공, 로그인 상태 유지, 서비스 이용 통계 분석 등의 목적으로 쿠키 및 유사 기술(앱의 경우 기기 식별자 등)을 사용할 수 있습니다. 이용자는 브라우저 또는 기기 설정을 통해 이를 거부할 수 있으나, 이 경우 일부 기능 이용에 제한이 있을 수 있습니다.</p>
+
+    <h2>제12조 만 14세 미만 아동의 개인정보 보호</h2>
+    <p>당사의 서비스는 <strong>만 14세 미만 아동의 이용을 허용하지 않으며, 만 14세 미만 아동의 개인정보를 수집하지 않습니다.</strong> 만 14세 미만 아동으로부터 개인정보가 수집된 사실을 알게 된 경우, 회사는 지체 없이 해당 정보를 삭제하는 등 필요한 조치를 취합니다. 법정대리인은 아동의 개인정보에 대한 열람, 정정, 삭제 및 수집·이용 동의 철회를 요구할 수 있습니다.</p>
+
+    <h2>제13조 개인정보의 안전성 확보 조치</h2>
+    <p>당사는 개인정보의 안전성 확보를 위하여 다음과 같은 조치를 취하고 있습니다.</p>
+    <ol>
+      <li><strong>관리적 조치</strong>: 내부 관리계획 수립·시행, 개인정보 취급자 최소화 및 교육</li>
+      <li><strong>기술적 조치</strong>: 개인정보처리시스템 접근권한 관리, 비밀번호 암호화, 전송구간 암호화(HTTPS/TLS), 저장 시 암호화, 보안프로그램 설치</li>
+      <li><strong>물리적 조치</strong>: 개인정보가 저장된 서버 및 자료에 대한 접근통제</li>
+    </ol>
+
+    <h2>제14조 개인정보의 파기 절차 및 방법</h2>
+    <ol>
+      <li>개인정보는 수집·이용 목적이 달성되면 지체 없이 파기됩니다. 다만 다른 법령에 따라 보관해야 하는 경우, 별도 데이터베이스로 옮기거나 보관 장소를 달리하여 보존합니다.</li>
+      <li>파기 절차: 파기 사유가 발생한 개인정보를 선정하고, 개인정보 보호책임자의 승인을 받아 파기합니다.</li>
+      <li>파기 방법
+        <ul>
+          <li>전자적 파일 형태로 저장된 개인정보: 기록을 재생할 수 없는 기술적 방법으로 삭제</li>
+          <li>종이 문서에 기록·저장된 개인정보(있는 경우): 분쇄기로 분쇄하거나 소각</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>제15조 개인정보 보호책임자 및 담당자</h2>
+    <p>회사는 이용자의 개인정보 보호와 관련한 문의에 신속하고 성실하게 답변드리기 위하여 아래와 같이 책임자와 담당자를 지정하고 있습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>성명</th><th>직책</th><th>연락처</th></tr>
+      <tr><td>개인정보 보호책임자</td><td>김수현</td><td><mark class="tbd">[ ]</mark> 확정 필요 (예: 대표)</td><td>010-0000-0000 / dama_admin@gmail.com</td></tr>
+      <tr><td>개인정보 보호담당자</td><td><mark class="tbd">[ ]</mark> 공동 개발자 성명 기재 필요</td><td><mark class="tbd">[ ]</mark> 확정 필요</td><td><mark class="tbd">[ ]</mark> 연락처 필요</td></tr>
+    </table></div>
+    <p>열람청구 접수·처리는 위 이메일로 가능하며, 이용자는 서비스 이용 중 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 위 담당자에게 문의하실 수 있습니다.</p>
+
+    <h2>제16조 권익침해 구제방법</h2>
+    <p>개인정보 침해에 대한 신고나 상담이 필요하신 경우 아래 기관에 문의하실 수 있습니다. 아래 기관은 회사와는 별개의 기관으로, 회사의 자체 처리 결과에 만족하지 못하시거나 추가 도움이 필요하신 경우 문의해 주시기 바랍니다.</p>
+    <ul>
+      <li>개인정보보호위원회 개인정보침해신고센터: (국번없이) 182 / privacy.go.kr</li>
+      <li>개인정보 분쟁조정위원회: 1833-6972 / www.kopico.go.kr</li>
+      <li>대검찰청 사이버범죄수사단: 국번없이 1301 / www.spo.go.kr</li>
+      <li>경찰청 사이버수사국: 국번없이 182 / ecrm.police.go.kr</li>
+    </ul>
+
+    <h2>제17조 개인정보처리방침의 적용 제외</h2>
+    <p>회사는 서비스 내에 다른 웹사이트 또는 외부 자료에 대한 링크를 제공할 수 있습니다. 이 경우 회사는 외부 사이트에 대한 통제권이 없으며, 해당 사이트의 개인정보 수집 행위에는 본 방침이 적용되지 않습니다. 외부 링크로 이동하는 경우, 해당 사이트의 개인정보 처리방침을 별도로 확인하시기 바랍니다.</p>
+
+    <h2>제18조 개인정보 처리방침의 변경</h2>
+    <p>본 개인정보 처리방침은 관련 법령, 서비스 내용 변경에 따라 수정될 수 있습니다. 내용 추가·삭제 및 수정이 있을 경우 시행 최소 7일 전(이용자 권리에 중대한 변경이 있는 경우 14일 전)부터 앱 공지사항 또는 서비스 내 알림을 통해 안내합니다.</p>
+    <ul>
+      <li>공고일자: <mark class="tbd">[ ]</mark></li>
+      <li>시행일자: <mark class="tbd">[ ]</mark></li>
+    </ul>
+
+    <div class="doc-footer">
+      이메일: dama_admin@gmail.com<br/>
+      담아(DAMA)<br/>
+      ⓒ 2026 DAMA
+    </div>
+  </article>
+
+  <article class="doc-body" data-lang="en" hidden>
+    <p>DAMA ("we", "us", or "our") respects users' personal information and complies with the Personal Information Protection Act (PIPA) of the Republic of Korea and other applicable laws. This Privacy Policy ("Policy") explains how personal information is collected, used, stored, and shared in connection with the DAMA group-buying marketplace application and related website (the "Service").</p>
+
+    <h2>Article 1. Information We Collect</h2>
+    <h3>a. When you sign up as a user (buyer)</h3>
+    <ul>
+      <li>(Required) name, email address, phone number, nickname, date of birth</li>
+      <li>(Required, if using Kakao social login) email address and profile nickname provided by Kakao</li>
+    </ul>
+    <h3>b. Location information (separate consent)</h3>
+    <ul><li>(Optional) Real-time GPS location — used to recommend nearby group-buys and stores. You can use core features of the Service without granting this consent.</li></ul>
+    <p class="note">⚠️ Note: collecting location data in Korea may require the Company to separately register as a "location-based service provider" with the Korea Communications Commission under the Act on the Protection, Use, Etc. of Location Information.</p>
+    <h3>c. When you register as a seller ("store owner")</h3>
+    <ul>
+      <li>(Required) business registration number, store name, store images, product (group-buy) information and photos, contact person's phone number</li>
+      <li><mark class="tbd">[ ]</mark> (Required, upon launch of payment features) Settlement account information (bank name, account holder, account number) will be collected once a payment system (PG) is introduced, and this Policy will be updated accordingly before that happens.</li>
+    </ul>
+    <h3>d. When you write a review</h3>
+    <ul><li>(Required) Review text and any images you attach</li></ul>
+    <h3>e. When you place and pick up a group-buy order</h3>
+    <ul><li>(Required) Name and phone number needed for order pickup, which is shared with the seller (see Article 6 below)</li></ul>
+    <p>Payment currently takes place directly between the buyer and seller outside the app (by card, cash, Zero Pay, Naver Pay, Kakao Pay, etc.). We do not currently collect or process any payment-related personal information, such as card or bank account details. If an in-app payment system (PG) is introduced in the future, this Policy will be updated and disclosed in advance.</p>
+    <h3>f. In-app chat (planned)</h3>
+    <p><mark class="tbd">[ ]</mark> We plan to introduce an in-app chat feature to support communication between buyers and sellers. Once introduced, chat content will be added as a collected data category, and we will amend this Policy and provide advance notice (and obtain separate consent where required) before launch.</p>
+    <h3>g. Information collected automatically while using the Service</h3>
+    <ul>
+      <li>IP address, device information (model, OS version), app version, access timestamps, service usage/error logs</li>
+      <li>App push notification token</li>
+    </ul>
+    <p>Additional device-related information, log data, or browser information may also be collected during service operation, but this information alone cannot identify a specific individual.</p>
+
+    <h2>Article 2. How We Collect Information</h2>
+    <p>We collect information through the following methods:</p>
+    <ol>
+      <li>When you agree to the collection of personal information and enter it directly during sign-up or while using the Service</li>
+      <li>When you voluntarily provide information while contacting customer support (email, in-app inquiries, etc.)</li>
+      <li>When we receive information from partner services such as Kakao, with your consent</li>
+      <li>Automatically, through log analysis, cookies, and similar technologies, while you use the Service</li>
+    </ol>
+
+    <h2>Article 3. Access to Device Permissions</h2>
+    <p>To provide the mobile app, we may access the following information and functions on your device:</p>
+    <div class="table-wrap"><table>
+      <tr><th>Type</th><th>Permission</th><th>Purpose</th></tr>
+      <tr><td>Required</td><td>Device and app information</td><td>Device identification and checking app version/status</td></tr>
+      <tr><td>Optional</td><td>Camera / Photos (iOS)</td><td>Attaching photos when creating store listings or reviews</td></tr>
+      <tr><td>Optional</td><td>External storage (Android)</td><td>Attaching photos when creating store listings or reviews</td></tr>
+      <tr><td>Optional</td><td>Location</td><td>Recommending nearby group-buys/stores (see Article 1.b)</td></tr>
+      <tr><td>Optional</td><td>Push notifications</td><td>Sending order pickup reminders and store information updates</td></tr>
+    </table></div>
+    <p>Required permissions are disclosed when you install or first launch the app. Optional permissions require separate consent the first time you use the related feature. You may decline optional permissions without losing access to the core Service.</p>
+
+    <h2>Article 4. How We Use Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+      <li>Account registration, identity verification, and account management</li>
+      <li>Providing group-buy product listings and facilitating transactions between buyers and sellers</li>
+      <li>Publishing your reviews (text and images) so that other logged-in users can view them</li>
+      <li>Recommending nearby group-buys/stores (only if you consent to location sharing)</li>
+      <li>Sharing information between buyers and sellers necessary to process order pickup (see Article 6)</li>
+      <li><mark class="tbd">[ ]</mark> (Planned) Supporting communication between buyers and sellers through in-app chat</li>
+      <li>Sending service-related notifications (app push, Kakao AlimTalk) such as pickup reminders for group-buy orders and store information updates</li>
+      <li>Preventing fraud, maintaining service stability, and handling inquiries</li>
+      <li>Complying with legal obligations</li>
+    </ul>
+    <p><strong>The notifications described above (order pickup reminders, store information updates) are operational notices necessary to use the Service. We do not currently use user information for advertising or promotional marketing purposes.</strong></p>
+    <p class="note">※ If we introduce promotional push/AlimTalk messages in the future, we will obtain separate prior consent and provide an opt-out method, as required under Korea's Act on Promotion of Information and Communications Network Utilization.</p>
+
+    <h2>Article 5. Data Retention</h2>
+    <ol>
+      <li>We retain and use personal information within the retention period required by law or the period you consented to when you provided your information.</li>
+      <li>Our general retention periods are as follows:</li>
+    </ol>
+    <div class="table-wrap"><table>
+      <tr><th>Data</th><th>Retention Period</th></tr>
+      <tr><td>Member information (name, email, phone number, nickname, date of birth)</td><td>Until account deletion; deleted immediately or as soon as technically feasible thereafter</td></tr>
+      <tr><td>Seller business information, store/product data</td><td>Until the seller's listing agreement ends</td></tr>
+      <tr><td>Reviews (text/images)</td><td>Until deleted by the user or until account deletion</td></tr>
+      <tr><td>Location data</td><td>Deleted immediately after the purpose is fulfilled; not separately stored</td></tr>
+      <tr><td>Access logs, service usage records</td><td>Retained up to 1 year for security and service improvement, then destroyed</td></tr>
+    </table></div>
+    <ol start="3">
+      <li>Under the Act on Consumer Protection in Electronic Commerce and related regulations, the following records are retained separately for the periods specified below before destruction:</li>
+    </ol>
+    <div class="table-wrap"><table>
+      <tr><th>Record</th><th>Retention Period</th><th>Legal Basis</th></tr>
+      <tr><td>Records of labeling and advertising</td><td>6 months</td><td>Enforcement Decree of the E-Commerce Consumer Protection Act</td></tr>
+      <tr><td>Records of contracts, withdrawal of offer, payment, and supply of goods/services</td><td>5 years</td><td>Enforcement Decree of the E-Commerce Consumer Protection Act</td></tr>
+      <tr><td>Records of consumer complaints or dispute resolution</td><td>3 years (or until conclusion of any related civil, criminal, or administrative proceedings)</td><td>Enforcement Decree of the E-Commerce Consumer Protection Act</td></tr>
+      <tr><td>Tax records (e.g., tax invoices)</td><td><mark class="tbd">[ ]</mark> To be confirmed with a tax professional (typically 5–10 years)</td><td>National Tax Basic Act, etc.</td></tr>
+      <tr><td>Communication confirmation data (e.g., login records)</td><td>3 months to 1 year (varies by type of record)</td><td>Article 41, Protection of Communications Secrets Act</td></tr>
+    </table></div>
+    <p class="note">※ The exact retention periods for tax-related records may vary depending on the type of document (tax invoice, withholding receipt, etc.). These should be finalized with a tax professional once the payment system and tax filing method are confirmed.</p>
+    <p>Once the retention period expires or the purpose of processing is fulfilled, personal information is destroyed without delay, unless retention is required under other laws, in which case the data is moved to a separate database or stored separately.</p>
+
+    <h2>Article 6. How We Share Information</h2>
+    <p>We do not share your personal information with third parties except in the following cases:</p>
+    <ul>
+      <li>When you have given prior, explicit consent</li>
+      <li>When required by law or requested through lawful procedures by an investigative authority</li>
+    </ul>
+    <p><strong>[Third-Party Disclosure]</strong></p>
+    <div class="table-wrap"><table>
+      <tr><th>Recipient</th><th>Data Shared</th><th>Purpose</th></tr>
+      <tr><td>Seller ("store owner")</td><td>Buyer's name, phone number, pickup information</td><td>Confirming orders and processing product pickup</td></tr>
+      <tr><td>Kakao</td><td>Login identification information</td><td>Social login integration</td></tr>
+      <tr><td><mark class="tbd">[ ]</mark> Future payment gateway (PG) provider</td><td>Minimum information necessary for payment</td><td>Payment processing (to be detailed once the provider is confirmed)</td></tr>
+    </table></div>
+    <p>Information shared is limited to the minimum necessary to achieve the stated purpose.</p>
+
+    <h2>Article 7. Service Providers (Data Processing Entrustment)</h2>
+    <p>We entrust certain operations to the following external service providers. When entering into entrustment agreements, we specify in writing that data may not be processed beyond the entrusted purpose, and we require technical and administrative safeguards, restrictions on re-entrustment, and ongoing oversight of each provider.</p>
+    <div class="table-wrap"><table>
+      <tr><th>Provider</th><th>Entrusted Task</th><th>Notes</th></tr>
+      <tr><td>Amazon Web Services (AWS)</td><td>Server infrastructure and data storage</td><td><mark class="tbd">[ ]</mark> Server region (domestic/overseas) to be confirmed</td></tr>
+      <tr><td>Firebase Cloud Messaging (FCM), etc.</td><td>App push notification delivery</td><td>-</td></tr>
+      <tr><td>Kakao (Kakao Channel / AlimTalk)</td><td>Kakao AlimTalk messaging</td><td>-</td></tr>
+      <tr><td><mark class="tbd">[ ]</mark> Future payment gateway (PG) provider</td><td>Payment and refund processing</td><td>To be added once confirmed</td></tr>
+      <tr><td><mark class="tbd">[ ]</mark> Future phone verification provider</td><td>Identity verification at sign-up (if introduced)</td><td>To be added once confirmed</td></tr>
+    </table></div>
+    <p>If the entrusted tasks or providers change, we will disclose this through an update to this Policy without delay.</p>
+
+    <h2>Article 8. Cross-Border Data Transfers</h2>
+    <p>We use Amazon Web Services (AWS) for our server infrastructure.</p>
+    <ul>
+      <li>Recipient: Amazon Web Services, Inc.</li>
+      <li>Data transferred: member information, seller information, reviews, and other data generated through use of the Service</li>
+      <li>Country/location of storage: <mark class="tbd">To be confirmed</mark> — if only a domestic (Seoul) AWS region is used, this section should state that no cross-border transfer occurs; if an overseas region is also used, the country, timing, and method of transfer must be specified in detail.</li>
+      <li>Purpose of transfer: operating servers and storing data to provide the Service</li>
+      <li>Safeguards: encryption in transit (TLS), encryption at rest, access controls</li>
+    </ul>
+    <p class="note">※ This section must be finalized once the actual AWS region is confirmed. If an overseas region is used, users must be clearly notified of the cross-border transfer as required under Article 28-8 of the Personal Information Protection Act.</p>
+
+    <h2>Article 9. Your Rights</h2>
+    <ol>
+      <li>As a user, you may exercise the following rights at any time:
+        <ul>
+          <li>Request access to your personal information</li>
+          <li>Request correction or deletion of your personal information</li>
+          <li>Request suspension of processing</li>
+          <li>Withdraw consent (including account deletion)</li>
+        </ul>
+      </li>
+      <li>To exercise these rights, please contact us at <strong>dama_admin@gmail.com</strong>. We will verify your identity and take the necessary action without undue delay.</li>
+      <li>If you request correction or deletion of inaccurate information, we will not use or share that information with third parties until the correction or deletion is complete.</li>
+      <li>You must not infringe upon your own or others' personal information in violation of applicable law.</li>
+    </ol>
+
+    <h2>Article 10. Visibility of Seller Information and Reviews</h2>
+    <p>Because DAMA is a group-buying marketplace, the following information is <strong>visible to all logged-in users</strong> as part of how the Service works:</p>
+    <ul>
+      <li>Store information, store name, and product (group-buy) photos and descriptions registered by sellers</li>
+      <li>Review text and images submitted by users</li>
+    </ul>
+    <p>Users should take care not to include their own or third parties' faces or personal information in review images. We inform users in advance that reviews and store information are visible to other users. Sellers are deemed to consent to their business registration number and other business-identifying information being accessible to administrators for operational purposes such as settlement and dispute resolution.</p>
+
+    <h2>Article 11. Cookies and Similar Technologies</h2>
+    <p>We may use cookies and similar technologies (including device identifiers in the app) to provide core app/website functions, maintain login sessions, and analyze usage statistics. You may disable these through your browser or device settings, though this may limit certain features.</p>
+
+    <h2>Article 12. Children's Privacy</h2>
+    <p>The Service <strong>does not permit use by children under the age of 14, and we do not collect personal information from children under 14.</strong> If we become aware that we have collected personal information from a child under 14, we will delete that information without delay and take any other necessary action. A legal guardian may request access, correction, deletion, or withdrawal of consent regarding a child's personal information.</p>
+
+    <h2>Article 13. Security Measures</h2>
+    <p>We take the following measures to protect personal information:</p>
+    <ol>
+      <li><strong>Administrative measures</strong>: establishing and implementing an internal management plan, minimizing personnel with access to personal information, and providing training</li>
+      <li><strong>Technical measures</strong>: access control for personal information processing systems, password encryption, encryption in transit (HTTPS/TLS), encryption at rest, and installation of security software</li>
+      <li><strong>Physical measures</strong>: access control over servers and physical materials where personal information is stored</li>
+    </ol>
+
+    <h2>Article 14. Destruction Procedures and Methods</h2>
+    <ol>
+      <li>Personal information is destroyed without delay once the purpose of collection and use has been achieved, unless retention is required under other laws, in which case it is moved to a separate database or stored separately.</li>
+      <li>Destruction procedure: personal information subject to destruction is identified and destroyed upon approval by the Data Protection Officer.</li>
+      <li>Destruction methods:
+        <ul>
+          <li>Personal information stored in electronic file format: deleted using technical methods that prevent the record from being recovered</li>
+          <li>Personal information recorded on paper (if any): shredded or incinerated</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Article 15. Data Protection Officer and Staff</h2>
+    <p>To respond promptly and diligently to inquiries related to personal information protection, we have designated the following officer and staff member:</p>
+    <div class="table-wrap"><table>
+      <tr><th>Role</th><th>Name</th><th>Title</th><th>Contact</th></tr>
+      <tr><td>Data Protection Officer</td><td>Kim Su-hyeon (김수현)</td><td><mark class="tbd">[ ]</mark> To be confirmed (e.g., CEO)</td><td>+82-10-0000-0000 / dama_admin@gmail.com</td></tr>
+      <tr><td>Data Protection Staff</td><td><mark class="tbd">[ ]</mark> Co-founder's name to be added</td><td><mark class="tbd">[ ]</mark> To be confirmed</td><td><mark class="tbd">[ ]</mark> Contact to be added</td></tr>
+    </table></div>
+    <p>Requests for access may be submitted via the email above. You may direct any inquiries, complaints, or requests for remedy related to personal information protection to the contact above.</p>
+
+    <h2>Article 16. Remedies for Infringement of Rights</h2>
+    <p>If you need to report or consult about a personal information infringement, you may contact the following organizations. These organizations are independent from the Company; please contact them if you are not satisfied with our internal handling of your complaint or need further assistance.</p>
+    <ul>
+      <li>Personal Information Infringement Report Center (Personal Information Protection Commission): 182 (no area code, Korea only) / privacy.go.kr</li>
+      <li>Personal Information Dispute Mediation Committee: 1833-6972 / www.kopico.go.kr</li>
+      <li>Cyber Investigation Division, Supreme Prosecutors' Office: 1301 (no area code, Korea only) / www.spo.go.kr</li>
+      <li>Cyber Bureau, Korean National Police Agency: 182 (no area code, Korea only) / ecrm.police.go.kr</li>
+    </ul>
+
+    <h2>Article 17. Exclusions from This Policy</h2>
+    <p>The Company may provide links to other websites or external materials within the Service. We have no control over such external sites, and this Policy does not apply to their data collection practices. If you follow a link to another site, please review that site's own privacy policy separately.</p>
+
+    <h2>Article 18. Changes to This Policy</h2>
+    <p>This Policy may be revised due to changes in applicable laws or the Service. In the event of any addition, deletion, or modification, we will provide notice through in-app announcements at least 7 days before the change takes effect (or at least 14 days in advance for material changes affecting user rights).</p>
+    <ul>
+      <li>Notice date: <mark class="tbd">[ ]</mark></li>
+      <li>Effective date: <mark class="tbd">[ ]</mark></li>
+    </ul>
+
+    <div class="doc-footer">
+      Email: dama_admin@gmail.com<br/>
+      DAMA<br/>
+      © 2026 DAMA
+    </div>
+  </article>
+</div>
+<script>
+  document.querySelectorAll('.lang-tab').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.lang-tab').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const lang = btn.dataset.lang;
+      document.querySelectorAll('.doc-body').forEach(el=>{ el.hidden = el.dataset.lang !== lang; });
+    });
+  });
+</script>
+</body>
+</html>
